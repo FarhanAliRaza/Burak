@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<body>
+  <!-- App Header -->
+  <div class="appHeader bg-dark text-light">
+    <div class="left">
+      <a href="javascript:;" class="headerButton goBack">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="pageTitle">Your Orders</div>
+    <div class="right">Help</div>
+  </div>
+  <div id="appCapsule">
+
+    <div class="section mt-2">
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Name</h3>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Location</h3>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Detail</h3>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Complete</h3>
+          </div>
+        </div>
+      </div>
+
+            {% for obj in obj_list %}
+            <div class="row" style="margin-top: 20px;">
+              <div class="col-3">
+                <div class="text">
+                  <h3 class="title">{{obj.ordered_by}}</h3>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="text">
+                  <h3 class="title">{{obj.delivery_loaction}}</h3>
+                </div>
+              </div>
+              <div class="col-3 ">
+                <a href="/burak/detailshop/{{obj.pk}}/" class="btn btn-primary  ">Detail</a>
+              </div>
+              <div class="col-3">
+                {% if obj.is_complete %}
+                <a href="#" class="btn  bg-success" style="">
+                  Complete</a>
+                {% else %}
+                <a href="/burak/shop/{{obj.pk}}/cmplt" class="btn btn-primary" style="">
+                  Complete</a>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+
+      {% include 'bottom.html' %}
+</body>
+
+{% endblock %}

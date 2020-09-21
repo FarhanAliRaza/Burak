@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="appHeader bg-dark text-light">
+                <div class="left">
+                    <a href="javascript:;" class="headerButton goBack">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                </div>
+                <div>
+                <h2 class="text-white" style="font-family: Noto Nastaliq Urdu Draft; font-size: 30px;">براق</h2>
+                </div>
+                <div class="right">
+                    {% comment %} <a href="javascript:;" class="headerButton">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a> {% endcomment %}
+                </div>
+    </div>
+    <div id="appCapsule">
+        <form class="needs-validation" method='GET' action='{% url "search:query" %}'>{% csrf_token %}
+
+                    <div class="form-group basic animated">
+                        <div class="input-wrapper">
+                            <label class="label" for="username22" style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">سرچ کریں</label>
+                            <input type="text" class="form-control" id="username22" placeholder="سرچ کریں" required name='q' aria-label="Search" value='{{ request.GET.q }}'>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="mt-2">
+                        <button class="btn btn-primary btn-block text-large" type="submit"><h2 style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px; color: blanchedalmond;">سرچ</h2></button>
+                    </div>
+
+        </form>
+        <div class="section full mt-3">
+            <div class="text-center" style="margin-bottom: 5px;"><h2 style="font-family: Noto Nastaliq Urdu Draft; font-size: 30px;">آپ کیا ڈھونڈ رہے ہیں</h2></div>
+            <div class="wide-block pt-2 pb-2">
+                <ul class="listview image-listview flush mb-2">
+                        {% for obj in cat_list %}
+                            <li>
+                                <div class="row"style="margin-top:20px;">
+                                    <div class="col-6">
+                                        <a href="{{obj.get_absolute_url}}">
+                                            <img src="{{obj.thumbnail.url}}" alt="image" class="imaged w120">
+                                        </a>
+                                    </div>
+                                    <a href="{{obj.get_absolute_url}}">
+                                    <div class="col-6">
+                                            <h1 style="font-family: Noto Nastaliq Urdu Draft; font-size: 27px;">{{obj.category}}</h1>
+                                    </div>
+                                </a>
+
+                                </div>
+                            </li>
+                        {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% include "bottom.html" %}
+{% endblock %}

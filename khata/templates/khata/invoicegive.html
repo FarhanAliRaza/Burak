@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<body style="font-family: Noto Nastaliq Urdu Draft;">
+    
+    <div class="appHeader bg-dark ">
+                <div class="left">
+                <a href="javascript:;" class="headerButton goBack" style="color: white;">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </a>
+                </div>
+ٍ              <div>
+                    <h1 class="text-white"> خریدار</h1>
+                </div>                
+                <div class="right">
+                    <a href="javascript:;" class="headerButton toggle-searchbox" style="color: white;">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+        <form class="search-form">
+            <div class="form-group searchbox">
+                <input type="text" class="form-control" placeholder="Search...">
+                <i class="input-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </i>
+                <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                    <ion-icon name="close-circle"></ion-icon>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- * Search Component -->
+
+
+
+    <div id="appCapsule">
+
+        <div class="section mb-2">
+                <form method="post" action="/khata/give/{{pk}}/">
+                    {% csrf_token %}
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                    
+                    {{form.as_p}}
+                    </div>
+                    </div>
+
+                    <input type="submit" class=" btn btn-dark" style="margin-top: 10px; " value="داخل کریں">
+                </form>
+            
+                
+        </div>
+
+
+   
+
+    </div>
+
+    {% include 'bottom.html' %}
+
+    
+</body>
+
+{% endblock %}

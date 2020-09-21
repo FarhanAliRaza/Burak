@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  <!-- App Header -->
+    <div class="appHeader bg-dark ">
+                    <div class="left">
+                    <a href="javascript:;" class="headerButton goBack" style="color: white;">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                    </div>
+                    <div>
+                        <h2 class="text-white">Your Order</h2>
+                    </div>                
+                    <div class="right">
+                        <a href="javascript:;" class="headerButton toggle-searchbox" style="color: white;">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </a>
+                    </div>
+        </div>
+
+  <!-- App Capsule -->
+  <div id="appCapsule">
+    <div class="section mt-2">
+      <div class="text-center">
+        <h1 style="font-family: Noto Nastaliq Urdu Draft; font-size: 30px;">خریدنے کا شکریہ</h1>
+        <div>
+          <ion-icon
+            name="heart"
+            style="font-size: 30px; color: red;"
+          ></ion-icon>
+        </div>
+        <div style="display: inline;">
+          <h2 style="display: inline; font-family: Noto Nastaliq Urdu Draft; font-size: 30px;">
+            ۔24 گھنٹے میں آپ کا آرڈر پہنچ جائے گا
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="section mt-2">
+      <!-- item -->
+      {% for obj in cart %}
+      <div class="card cart-item mb-2" id="{{obj.product_pk}}">
+        <div class="card-body">
+          {% comment %}
+          <div class="in">
+            {% endcomment %}
+            <div class="row">
+              <div class="col-6">
+                <div class="text">
+                  <h3 class="title">{{obj.product}}</h3>
+                </div>
+              </div>
+              <div
+                class="col-6 text-right text-primary kakatext {{obj.product_pk}}"
+              >
+                {{obj.subtotal}} Rs
+              </div>
+            </div>
+            {% comment %}
+          </div>
+          {% endcomment %}
+          <div class="cart-item-footer">
+            <div class="stepper stepper-sm stepper-secondary">
+              <h3 style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">{{obj.quantity}} مقدار</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- * item -->
+    </div>
+
+    <div class="section mt-2 mb-2">
+      <div class="card">
+        <ul class="listview flush transparent simple-listview">
+          <li>
+            Shipping <span class="text-primary font-weight-bold">50 Rs</span>
+          </li>
+                  
+          <li>
+            Total<span class="text-primary font-weight-bold"
+              >{{order.total}} Rs</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section mb-2">
+      <a href="/" class="btn btn-block btn-lg text-white" style="background: #000; font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">واپس جایٗں</a>
+    </div>
+  </div>
+  <!-- * App Capsule --> 
+  {% include 'bottom.html' %}
+</body>
+
+{% endblock %}

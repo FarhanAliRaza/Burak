@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  <!-- App Header -->
+  <div class="appHeader bg-dark text-light">
+    <div class="left">
+      <a href="javascript:;" class="headerButton goBack">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="pageTitle">Burak</div>
+    <div class="right">Help</div>
+  </div>
+  <div id="appCapsule">
+    <div class="section mb-2 " style="margin-top: 70px;">
+      <a href="fill/" class="btn btn-primary btn-block btn-lg">Filling</a>
+    </div>
+    <div class="section mb-2">
+      <a href="deliver/" class="btn btn-primary btn-block btn-lg">Delivering</a>
+    </div>
+  </div>
+  <!-- * App Capsule -->
+  {% include 'bottom.html' %}
+</body>
+
+{% endblock %}

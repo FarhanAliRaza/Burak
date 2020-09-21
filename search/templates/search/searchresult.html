@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<body>
+     <div class="appHeader bg-dark text-light">
+                <div class="left">
+                    <a href="javascript:;" class="headerButton goBack">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                </div>
+                <div>
+                <h2 class="text-white">براق</h2>
+                </div>
+                <div class="right">
+                    <a href="javascript:;" class="headerButton">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a> 
+                </div>
+    </div>
+    <div id="appCapsule">
+
+
+        <div class="section full mt-2">
+                <div class="text-center">
+                    {% if query %}
+                   <h3>Search Result for <strong>{{query}}</strong></h3>
+                   {% else %}
+                   <h3>Products</h3>
+                   {% endif %}
+                </div>
+                <div class="section full mt-2 mb-2">
+                <div class="wide-block pt-2 pb-2">
+                    <div class="mb-1">
+
+            {% for obj in object_list %}
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-4">
+                        <img src="{{obj.thumbnail.url}}" alt="image" class="imaged w120">
+                    </div>
+                    <div class="col-4">
+                        <h2>{{obj.title}}</h2>
+                        <div class="">
+                            <h4>{{obj.amount}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="javascript:;" id="shop-btn" data-id="{{obj.id}}" data-title="{{obj.title}}" data-price="{{obj.price}}" data-img="{{obj.thubnail.url}}" class="btn btn-sm btn-primary btn-block" data-toggle="modal" data-target="#actionSheetForm" >ADD TO CART</a>
+                        <h3 class="jani">{{obj.price}} Rs</h3>
+                    </div>
+                </div>
+
+            {% endfor %}
+                   </div>
+                </div>
+            </div>
+
+                
+        </div>
+    </div>
+    {% include 'bottom.html' %}
+</body>
+    {% endblock %}

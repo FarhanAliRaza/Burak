@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    
+    <div class="appHeader bg-dark ">
+                <div class="left">
+                <a href="javascript:;" class="headerButton goBack" style="color: white;">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </a>
+                </div>
+<div>
+                    <h1 class="text-white">Dashboard</h1>
+                </div>                
+                <div class="right">
+                    <a href="javascript:;" class="headerButton toggle-searchbox" style="color: white;">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+        <form class="search-form">
+            <div class="form-group searchbox">
+                <input type="text" class="form-control" placeholder="Search...">
+                <i class="input-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </i>
+                <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                    <ion-icon name="close-circle"></ion-icon>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- * Search Component -->
+
+
+
+    <div id="appCapsule">
+        <div class="section mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card text-white bg-info mb-2">
+                        <div class="card-header text-large text-centre">ٹوٹل آرڈر </div>
+                        <div class="card-body">
+                            <h2 class="text-white">{{total_orders}}</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-white bg-info mb-2">
+                        <div class="card-header text-large">ٹوٹل فروخت</div>
+                        <div class="card-body">
+                            <h2 class="text-white">{{total}} Rs</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card text-white bg-info mb-2">
+                        <div class="card-header text-large text-centre"> ایکٹو آرڈر </div>
+                        <div class="card-body">
+                            <h2 class="text-white">{{active}}</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-white bg-info mb-2">
+                        <div class="card-header text-large">آرڈر پہنچ گےٗ</div>
+                        <div class="card-body">
+                            <h2 class="text-white">{{inactive}}</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-2">
+          </div>
+    </div>
+
+    {% include 'bottom.html' %}
+
+
+</body>
+
+{% endblock %}

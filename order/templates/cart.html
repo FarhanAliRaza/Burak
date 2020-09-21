@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+<!-- App Header -->
+    <div class="appHeader bg-dark">
+                <div class="left">
+                    <a href="javascript:;" class="headerButton goBack" style="color: white;">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                </div>
+<div>
+                    <h2 class="text-white">Cart</h2>
+                </div>                
+                <div class="right">
+            <a href="#" class="headerButton" style="color: white;" data-toggle="modal" data-target="#DialogClear">
+                <ion-icon name="trash-outline"></ion-icon>
+            </a>
+            </div>
+    </div>
+
+    <!-- * App Header -->
+   <div class="modal fade dialogbox" id="DialogClear" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Empty Cart</h5>
+                </div>
+                <div class="modal-body">
+                    All items will be deleted.
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline">
+                        <a href="#" class="btn btn-text-secondary" data-dismiss="modal">CLOSE</a>
+                        <a href="/ajax/clear" class="btn btn-text-primary" >DELETE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- * Dialog Clear -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <div class="section mt-2">
+            <!-- item -->
+            {% for obj in obj_list %}
+                <div class="card cart-item mb-2 " id="{{obj.product_pk}}">
+                    <div class="card-body">
+                        {% comment %} <div class="in"> {% endcomment %}
+                            <div class="row">
+                                <div class="col-6">
+                                    <img src="{{obj.thumbnail.url}}" alt="product" class="imaged">
+                                    <div class="text">
+                                        <h3 class="title" style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;"> نام : {{obj.title}}</h3>
+                                        <h3 class="" style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">  {{obj.price}} Rs</h3>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-right text-primary kakatext {{obj.product_pk}}">
+                                    {{obj.sub}} Rs
+                                </div>
+                                
+                            </div>
+                        <div class="cart-item-footer">
+                            <div class="stepper stepper-sm stepper-secondary">
+                                <h3 style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">{{obj.quantity}} : مقدار</h3>
+                            </div>
+                            <a href="/ajax/delete/{{obj.product_pk}}/" class="btn btn-outline-danger btn-sm">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- * item -->
+
+        </div>
+
+        {% if items %}
+            <div class="section mt-2 mb-2">
+                <div class="card">
+                    <ul class="listview flush transparent simple-listview">
+                        <li>Items <span class="text-muted">{{items}} Rs</span></li>
+                        <li>Shipping <span class="text-muted">50 Rs</span></li>
+                        {% comment %} <li>Tax (10%)<span class="text-muted">$ 5.70</span></li> {% endcomment %}
+                        <li>Total<span class="text-primary font-weight-bold">{{total}} Rs</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section mb-2">
+            <a href="thankyou" class="btn btn-primary btn-block btn-lg"><h2 style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px; color: blanchedalmond;">آرڈر کریں</h2></a>
+
+        </div>
+        {% else %}
+            <h1 class="text-center jani" style="font-family: Noto Nastaliq Urdu Draft; font-size: 30px;"> آپ کی کارٹ میں کچھ بھی نہیں ھے </h1>
+            <a href="/" class="btn btn-primary btn-block btn-lg" style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px; margin-top: 50px; ">کچھ خریدیں</a>
+
+        {% endif %}
+
+
+
+
+    </div>
+    <!-- * App Capsule -->
+    {% include 'bottom.html' %}
+
+     
+   
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

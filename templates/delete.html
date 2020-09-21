@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+
+    <div class="appHeader bg-dark">
+                <div class="left">
+                    <a href="#" class="headerButton" style="color: white;">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                </div>
+ٍ                <div>
+                    <h2 class="text-white">براق</h2>
+                </div>                
+                <div class="right">
+                    <a href="javascript:;" class="headerButton toggle-searchbox" style="color: white;">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+        <form class="search-form"method='GET' action='{% url "search:query" %}'>{% csrf_token %}
+            <div class="form-group searchbox">
+                <input type="text" class="form-control" placeholder="Search..." required name='q' aria-label="Search">
+                <button class="btn" type="submit">
+                <i class="input-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </i>
+                </button>
+                <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                    <ion-icon name="close-circle"></ion-icon>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- * Search Component -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+
+        <div class="section full mt-2">
+            <div class="wide-block pt-2 pb-2">
+            <div class="text-centre">
+                <h1 style="font-family: Noto Nastaliq Urdu Draft; font-size: 27px;">کیا آپ  ڈلیٹ کرنا چاہتے ہیں؟</h1>
+                <h2> {{ object.title }}</h2>
+            </div>
+            <form method='POST' >{% csrf_token %}
+
+                <button class='btn btn-danger btn-block'><h1 style="font-family: Noto Nastaliq Urdu Draft; font-size: 20px;">ہاں</h1>
+                </button>
+
+            </form>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- * App Capsule -->
+
+
+
+
+    {% include 'bottom.html' %}
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

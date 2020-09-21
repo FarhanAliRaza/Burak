@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<body>
+    
+    <div class="appHeader bg-dark ">
+                <div class="left">
+                <a href="javascript:;" class="headerButton goBack" style="color: white;">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </a>
+                </div>
+ٍ                <div>
+                    <h1 class="text-white">براق</h1>
+                </div>                
+                <div class="right">
+                    <a href="javascript:;" class="headerButton toggle-searchbox" style="color: white;">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+        <form class="search-form">
+            <div class="form-group searchbox">
+                <input type="text" class="form-control" placeholder="Search...">
+                <i class="input-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </i>
+                <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                    <ion-icon name="close-circle"></ion-icon>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- * Search Component -->
+
+
+    <div id="appCapsule">
+
+            <div class="section mt-2">
+				<form method='POST' enctype='multipart/form-data'> {% csrf_token %}
+					{{ form|crispy }}
+                    <button type='submit' class='btn btn-primary btn-block'>Submit</button>
+
+                </form>
+            </div>
+            
+
+    </div>
+    
+    
+    
+    
+    
+    
+
+    {% include 'bottom.html' %}
+
+</body>
+
+{% endblock %}

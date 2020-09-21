@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  <!-- App Header -->
+  <div class="appHeader bg-primary text-light">
+    <div class="left">
+      <a href="javascript:;" class="headerButton goBack">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="pageTitle">Your Order</div>
+    <div class="right"></div>
+  </div>
+
+  <!-- App Capsule -->
+  <div id="appCapsule">
+    <div class="section mt-2">
+      <h2>Name : {{ord.ordered_by}}</h2>
+      <h2>ID : {{ord.order_id}}</h2>
+      <h2>Total : {{ord.total}}</h2>
+    </div>
+    <div class="section mt-2">
+      <div class="row">
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Image</h3>
+          </div>
+        </div>
+        <div class="col-3 " >
+          <div class="text">
+            <h3 class="title">Product</h3>
+          </div>              </div>
+        <div class="col-3">
+          <div class="text">
+            <h3 class="title">Quantity</h3>
+          </div>
+        </div>
+        <div class="col-3 " >
+          <div class="text">
+            <h3 class="title">Product Quantity</h3>
+          </div>
+        </div>
+      </div>
+      {% for obj in obj_list %}
+            <div class="row">
+              <div class="col-3">
+                  {% if obj.product.thumbnail  %}
+                    <img src="{{obj.product.thumbnail.url}}" alt="image" class="imaged w100">
+                  {% endif %}
+              </div>
+              <div class="col-3 " >
+                <div class="text">
+                  <h3 class="title">{{obj.product}}</h3>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="text">
+                  <h3 class="title">{{obj.quantity}}</h3>
+                </div>
+              </div>
+              <div class="col-3 " >
+                <div class="text">
+                  <h3 class="title">{{obj.product.amount}}</h3>
+                </div>
+              </div>
+            {% endfor %}
+
+     </div>
+   
+    <div class="section " style="margin-top: 30px;">
+      <a href="/burak/shop/{{pk}}/cmplt" class="btn btn-primary btn-block btn-lg">Complete</a>
+    </div>
+  </div>
+  <!-- * App Capsule -->
+  {% include 'bottom.html' %}
+</body>
+
+{% endblock %}

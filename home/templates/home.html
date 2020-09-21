@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+
+    <div class="appHeader">
+                <div class="left">
+                    <a href="#" class="headerButton" style="color: rgb(255, 166, 0);">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                </div>
+<div>
+                    <img src="{% static 'assets/img/logopk.png' %}" alt="image" class="imaged w200">
+                </div>                
+                <div class="right">
+                    <a href="javascript:;" class="headerButton toggle-searchbox" style="color: rgb(216, 142, 5);">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+        <form class="search-form" method='GET' action='{% url "search:query" %}'>{% csrf_token %}
+            <div class="form-group searchbox">
+                <input type="text" class="form-control" placeholder="Search..." required name='q' aria-label="Search">
+                <button class="btn" type="submit">
+                <i class="input-icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </i>
+                </button>
+                <a href="javascript:;" class="ml-1 close toggle-searchbox">
+                    <ion-icon name="close-circle"></ion-icon>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- * Search Component -->
+
+
+    <div id="appCapsule">
+
+
+<!-- 
+        <div class="section full mb-3">
+                <div class="section-title">Categories</div>
+
+                <div class="carousel-multiple owl-carousel owl-theme">
+                    {% for cat in cat_list %}
+                        <div class="item">
+                            <a href = "{{cat.get_absolute_url}}">
+                                <div class="card bg-dark text-black text-center">
+                                    {% if cat.thumbnail %}
+                                    <img src="{{cat.thumbnail.url}}" class="card-img overlay-img" alt="image">
+                                    {% endif %}
+                                    <div class="card-img-overlay">
+                                        <h1 class="card-title" style="font-family: Noto Nastaliq Urdu Draft;">{{cat.category}}</h1>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+        </div> -->
+
+
+        <div class="section full mb-3">
+            <div class="section-title" style="font-size: large;">Categories</div>
+                <div class="row" style="padding-top: 20px;">
+                {% for cat in cat_list %}
+                        <div class="col-6">
+                        <div class="card product-card">
+                            <div class="card-body">
+                                <a href = "{{cat.get_absolute_url}}">
+                                <img src="{{cat.thumbnail.url}}" class="image " alt="product image">
+                                <div class="" style="text-align: center;">
+                                    <h1 style="font-family: Noto Nastaliq Urdu Draft; font-size: 30px;">{{cat.category}}</h1>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                        </div>
+                        <div class="row" style="padding-top: 20px;">
+
+                    {% endif %}
+                {% endfor %}
+                </div>
+        </div>
+    
+    </div>
+
+
+    {% include 'bottom.html' %}
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

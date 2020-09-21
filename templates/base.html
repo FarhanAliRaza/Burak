@@ -1,0 +1,52 @@
+{% load static %}
+{% load pwa %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% progressive_web_app_meta %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Buraq</title>
+    <meta name="buraqpk is b2b and b2c ecommerce website" content="Mobilekit HTML Mobile UI Kit">
+    <meta name="buraq, buraqpk, shopping, food delivery, home delivery" content="bootstrap 4, mobile template, cordova, phonegap, mobile, html" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="manifest" href="{% static '__manifest.json' %}">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+    {% block content %}
+    {% endblock %}
+    
+
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="{% static 'assets/js/lib/jquery-3.4.1.min.js' %}"></script>
+    <!-- Bootstrap-->
+    <script src="{% static 'assets/js/lib/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/lib/bootstrap.min.js' %}"></script>
+    <!-- Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'assets/js/plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+    <!-- jQuery Circle Progress -->
+    <!-- Base Js File -->
+    <script src="{% static 'assets/js/base.js' %}"></script>
+    <script src="{% static 'assets/js/cart.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery-countdown/jquery.countdown.min.js' %}"></script>
+
+
+</body>
+</html>
