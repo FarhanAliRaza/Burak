@@ -13,7 +13,7 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, '/static/js', 'serviceworker.js
 SECRET_KEY = 'Secret'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 PWA_APP_DEBUG_MODE = False
 
 ALLOWED_HOSTS = []
@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'pwa',
     # Our Apps
     'home',
-    'manufacturer',
-    'service',
     'shop',
     'products',
     'search',

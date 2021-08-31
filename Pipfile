@@ -1,14 +1,11 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
+name = "pypi"
+
+[packages]
 
 [dev-packages]
 
-[packages]
-setup-py = "*"
-django-allauth = "*"
-django-imagekit = "*"
-
 [requires]
-python_version = "3.7.1"
+python_version = "3.9"
