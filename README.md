@@ -18,6 +18,8 @@ I did not even tried to develop it further :(
 		pip3 install -r requirements.txt
 		activate enviroment
 		python manage.py runserver
+	open 127.0.0.1:8000 or localhost:8000
+
 ## ScreenShots
 
 1. Home page for Shops <img src='./screenshots/home.png' alt='' />
