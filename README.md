@@ -10,7 +10,7 @@ I started to build this mvp for my startup in 2019 then I did not even launched 
 ## Fun Fact
 Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
 I did not even tried to develop it further :(
-	---------
+---------
 
 ## Setup
 	Phone = 03123456789
