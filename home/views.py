@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from products.models import Product, Category
 from order.cart import Cart
 from shop.models import Shop
 
 
-
-
+@login_required
 def home(request):
     cart = Cart(request.session)
     no = cart.unique_count.real

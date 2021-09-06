@@ -24,12 +24,6 @@ def upload_image_path(instance, filename):
 
 
 
-# main_category = (
-#     ('Shop', 'Shop'),
-#     ('Manufacturer', 'Manufacturer'),
-#     ('Service', 'Service')
-# )
-
 
 class ShopManager(models.Manager):
 

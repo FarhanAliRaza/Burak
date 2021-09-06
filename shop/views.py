@@ -33,31 +33,14 @@ def whole_seller_registeration_view(request):
 
 
 def shop_view(request):
-    # if request.user.is_vendor:
-    #     usr_id = request.user.id
-    #     w_obj = WholeSeller.objects.get(pk=usr_id)
-    #     act_obj_list = ShopOrder.objects.filter(wholeseller=w_obj, is_complete=True).order_by("-timestamp")
-    #     t_obj_list = ShopOrder.objects.filter(wholeseller=w_obj, is_complete=False).order_by("-timestamp")
-    #     active = len(act_obj_list)
-    #     inactive = len(t_obj_list)
-    #     obj_list = ShopOrder.objects.filter(wholeseller=w_obj).order_by("-timestamp")
-    #     total_orders = len(obj_list)
-    #     total = 0
-    #     for obj in obj_list:
-    #         total += obj.total
-    #     context = {
-    #         'active': active,
-    #         'inactive': inactive,
-    #         'total_orders': total_orders,
-    #         'total': total,
-    #         "obj_list" : active,
-
-    #     }
-    #     template_name = "shop/vendordashboard.html"
-    # else:
+   
     usr_id = request.user.id
     template_name = "shop/dashboard.html"
-    s_obj = Shop.objects.get(pk=usr_id)
+    try:
+        s_obj = Shop.objects.get(pk=usr_id)
+    except:
+        return redirect("/")
+    
     obj_list = Order.objects.filter(ordered_by=s_obj, is_complete=False).order_by("-timestamp")
     objs = Order.objects.filter(ordered_by=s_obj).order_by("-timestamp")
     total=0
@@ -81,9 +64,7 @@ def shop_product_view(request):
     if request.user.is_vendor:
         usr_id = request.user.id
         w_obj = WholeSeller.objects.get(pk=usr_id)
-        context = {
-            'obj_list': obj_list
-        }
+        
         template_name = "shop/list.html"
     else:
         usr_id = request.user.id
@@ -100,4 +81,3 @@ def shop_product_view(request):
             "total": total
         }
     return render(request, template_name, context)
-

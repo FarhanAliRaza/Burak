@@ -12,6 +12,7 @@ def login_view(request):
         if form.is_valid():
             mobile = form.cleaned_data.get("mobile")
             password = form.cleaned_data.get("password")
+            mobile = int(mobile)
             user = authenticate(mobile=mobile, password=password)
             if user is not None:
                 login(request, user)
@@ -59,3 +60,6 @@ def forgot_pass_view(request):
 
 
     return render(request, "register/forgot.html", {})
+
+def register_msg_view(request):
+    return render(request, "register/reg_msg.html", {})

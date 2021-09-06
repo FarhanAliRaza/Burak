@@ -16,7 +16,7 @@ SECRET_KEY = 'Secret'
 DEBUG = True
 PWA_APP_DEBUG_MODE = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
