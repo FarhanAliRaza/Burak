@@ -10,6 +10,7 @@ I started to build this mvp for my startup in 2019 but then I did not even launc
 ## Fun Fact
 Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
 I did not even tried to develop it further :(
+
 ---------
 
 ## Setup
