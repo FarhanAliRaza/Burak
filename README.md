@@ -7,11 +7,11 @@ For easier use of local i built this in Urdu. It is not complete. It was Just an
 Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
 I did not even tried to develop it further :(
 ## Setup
-With Docker 
+<b> With Docker </b> 
 open folder then run
-docker build -t burak -f Dockerfile .
-docker run -ti -p 8000:8000 burak
-Without Docker
+<p>docker build -t burak -f Dockerfile .</p>
+<p>docker run -ti -p 8000:8000 burak</p>
+<b> Without Docker </b>
 pipenv shell
 pip3 install -r requirements.txt
 activate enviroment
