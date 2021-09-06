@@ -3,7 +3,7 @@ Burak is PWA B2B ecommerce marketplace that helps mom-and-pop stores source inve
  
 ---------
 ## About the Project
-I started to build this mvp for my startup in 2019 then I did not even launched it. Because it required a large capital. But I learnt a lot of stuff from this web app. It taught me few things about startups, plan first build later and why business plans matter in a startup pitch :). It really helped me to learn Django.I built this in urdu so that it will be easier for local people to understand. It is not complete, it was Just an MVP.
+I started to build this mvp for my startup in 2019 but then I did not even launched it. Because it required a large capital. But I learnt a lot of stuff from this web app. It taught me few things about startups, plan first build later and why business plans matter in a startup pitch :). It really helped me to learn Django.I built this in urdu so that it will be easier for local people to understand. It is not complete, it was Just an MVP.
 
 ---------
 
