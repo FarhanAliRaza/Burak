@@ -16,7 +16,7 @@ pipenv shell
 pip3 install -r requirements.txt
 activate enviroment
 python manage.py runserver
-## Screenshots
+ ## Screenshots
 
 1. Home page for Shops <img src='./screenshots/home.png' alt='' />
 2. Home Page Dark Mode :) <img src='./screenshots/home_dark.png' alt='' />
