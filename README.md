@@ -10,6 +10,8 @@ For easier use of local i built this in Urdu. It is not complete. It was Just an
 Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
 I did not even tried to develop it further :(
 ## Setup
+	Phone = 03123456789
+	Pass  = 1234
 	With Docker 
 		docker build -t burak -f Dockerfile .
 		docker run -ti -p 8000:8000 burak
