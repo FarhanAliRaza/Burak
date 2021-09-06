@@ -1,11 +1,5 @@
 # Burak
 Burak is PWA B2B ecommerce marketplace that helps mom-and-pop stores source inventory and manage their debit and credits
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-- Farhan Ali Raza, [![LinkedIn - farhanaliraza][linkedin-shield]][linkedin-url-farhanaliraza]
 
 
 
@@ -16,15 +10,15 @@ For easier use of local i built this in Urdu. It is not complete. It was Just an
 Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
 I did not even tried to develop it further :(
 ## Setup
-	<b> With Docker </b> 
-	open folder then run
-	<p>docker build -t burak -f Dockerfile .</p>
-	<p>docker run -ti -p 8000:8000 burak</p>
-	<b> Without Docker </b>
-	<p>pipenv shell</p>
-	<p>pip3 install -r requirements.txt</p>
-	<p>activate enviroment</p>
-	<p>python manage.py runserver</p>
+	With Docker 
+		open folder then run
+			docker build -t burak -f Dockerfile .
+			docker run -ti -p 8000:8000 burak
+	Without Docker 
+				pipenv shell
+				pip3 install -r requirements.txt
+				activate enviroment
+				python manage.py runserver
 ## ScreenShots
 
 1. Home page for Shops <img src='./screenshots/home.png' alt='' />
