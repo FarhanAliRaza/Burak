@@ -11,14 +11,13 @@ Startups with products like this app are now funded (largest series A in history
 I did not even tried to develop it further :(
 ## Setup
 	With Docker 
-		open folder then run
-			docker build -t burak -f Dockerfile .
-			docker run -ti -p 8000:8000 burak
+		docker build -t burak -f Dockerfile .
+		docker run -ti -p 8000:8000 burak
 	Without Docker 
-				pipenv shell
-				pip3 install -r requirements.txt
-				activate enviroment
-				python manage.py runserver
+		pipenv shell
+		pip3 install -r requirements.txt
+		activate enviroment
+		python manage.py runserver
 ## ScreenShots
 
 1. Home page for Shops <img src='./screenshots/home.png' alt='' />
