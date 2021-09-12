@@ -25,13 +25,13 @@ I started to build this mvp for my startup in 2019 but then I did not even launc
 
 ## ScreenShots
 
-## Home page for Shops
+# Home page for Shops
   <img src='./screenshots/home.png' alt=''  height="600"/>
-## Home Page Dark Mode :) 
+# Home Page Dark Mode :) 
   <img src='./screenshots/home_dark.png' alt='' height="600" />
-## Add to Cart
+# Add to Cart
   <img src='./screenshots/add_to_cart.png' alt='' height="600" />
-## Cart 
+# Cart 
   <img src='./screenshots/cart.png' alt='' height="600" />
 ## Cart Delete
   <img src='./screenshots/cart_delete.png' alt='' height="600" />
