@@ -25,16 +25,27 @@ I started to build this mvp for my startup in 2019 but then I did not even launc
 
 ## ScreenShots
 
-1. Home page for Shops <img src='./screenshots/home.png' alt=''  height="600"/>
-2. Home Page Dark Mode :) <img src='./screenshots/home_dark.png' alt='' height="600" />
-3. Add to Cart <img src='./screenshots/add_to_cart.png' alt='' height="600" />
-4. Cart <img src='./screenshots/cart.png' alt='' height="600" />
-5. Cart Delete <img src='./screenshots/cart_delete.png' alt='' height="600" />
-6. Dukan view of summary of purchasing and credits given <img src='./screenshots/dukan_acc_detail.png' alt='' height="600" />
-7. Detail view of customer credits and debits <img src='./screenshots/khata_view_customer.png' alt='' height="600" />
-8. Summary of customers credits and debits <img src='./screenshots/khata.png' alt='' height="600" />
-9. Search Page <img src='./screenshots/search_p.png' alt='' height="600" />
-10.Search Result <img src='./screenshots/search_result.png' alt='' height="600" />
-11.Order Detail <img src='./screenshots/order_detail.png' alt='' height="600" />
+## Home page for Shops
+  <img src='./screenshots/home.png' alt=''  height="600"/>
+## Home Page Dark Mode :) 
+<img src='./screenshots/home_dark.png' alt='' height="600" />
+## Add to Cart
+<img src='./screenshots/add_to_cart.png' alt='' height="600" />
+## Cart 
+<img src='./screenshots/cart.png' alt='' height="600" />
+## Cart Delete
+<img src='./screenshots/cart_delete.png' alt='' height="600" />
+## Dukan view of summary of purchasing and credits given
+<img src='./screenshots/dukan_acc_detail.png' alt='' height="600" />
+## Detail view of customer credits and debits
+<img src='./screenshots/khata_view_customer.png' alt='' height="600" />
+## Summary of customers credits and debits
+<img src='./screenshots/khata.png' alt='' height="600" />
+## Search Page
+<img src='./screenshots/search_p.png' alt='' height="600" />
+## Search Result 
+<img src='./screenshots/search_result.png' alt='' height="600" />
+## Order Detail 
+<img src='./screenshots/order_detail.png' alt='' height="600" />
 
 ---------
