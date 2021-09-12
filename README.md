@@ -5,11 +5,6 @@ Burak is PWA B2B ecommerce marketplace that helps mom-and-pop stores source inve
 ## About the Project
 I started to build this mvp for my startup in 2019 but then I did not even launched it. Because it required a large capital. But I learnt a lot of stuff from this web app. It taught me few things about startups, plan first build later and why business plans matter in a startup pitch :). It really helped me to learn Django.I built this in urdu so that it will be easier for local people to understand. It is not complete, it was Just an MVP.
 
----------
-
-## Fun Fact
-Startups with products like this app are now funded (largest series A in history of startups in pakistan 30 million dollars)
-I did not even tried to develop it further :(
 
 ---------
 
@@ -30,16 +25,16 @@ I did not even tried to develop it further :(
 
 ## ScreenShots
 
-1. Home page for Shops <img src='./screenshots/home.png' alt='' />
-2. Home Page Dark Mode :) <img src='./screenshots/home_dark.png' alt='' />
-3. Add to Cart <img src='./screenshots/add_to_cart.png' alt='' />
-4. Cart <img src='./screenshots/cart.png' alt='' />
-5. Cart Delete <img src='./screenshots/cart_delete.png' alt='' />
-6. Dukan view of summary of purchasing and credits given <img src='./screenshots/dukan_acc_detail.png' alt='' />
-7. Detail view of customer credits and debits <img src='./screenshots/khata_view_customer.png' alt='' />
-8. Summary of customers credits and debits <img src='./screenshots/khata.png' alt='' />
-9. Search Page <img src='./screenshots/search_p.png' alt='' />
-10.Search Result <img src='./screenshots/search_result.png' alt='' />
-11.Order Detail <img src='./screenshots/order_detail.png' alt='' />
+1. Home page for Shops <img src='./screenshots/home.png' alt=''  height="600"/>
+2. Home Page Dark Mode :) <img src='./screenshots/home_dark.png' alt='' height="600" />
+3. Add to Cart <img src='./screenshots/add_to_cart.png' alt='' height="600" />
+4. Cart <img src='./screenshots/cart.png' alt='' height="600" />
+5. Cart Delete <img src='./screenshots/cart_delete.png' alt='' height="600" />
+6. Dukan view of summary of purchasing and credits given <img src='./screenshots/dukan_acc_detail.png' alt='' height="600" />
+7. Detail view of customer credits and debits <img src='./screenshots/khata_view_customer.png' alt='' height="600" />
+8. Summary of customers credits and debits <img src='./screenshots/khata.png' alt='' height="600" />
+9. Search Page <img src='./screenshots/search_p.png' alt='' height="600" />
+10.Search Result <img src='./screenshots/search_result.png' alt='' height="600" />
+11.Order Detail <img src='./screenshots/order_detail.png' alt='' height="600" />
 
 ---------
